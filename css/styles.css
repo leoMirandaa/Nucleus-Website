@@ -36,7 +36,9 @@ img {
   max-width: 100%;
   display: block;
 }
-.container {
+
+/* all classes that ends in __container */
+[class$="__container"] {
   max-width: 120rem;
   margin: 0 auto;
   width: 90%;
@@ -66,12 +68,6 @@ img {
   .header {
     background-size: 80rem
   }
-}
-
-.header__container {
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -157,4 +153,57 @@ img {
   .navigation__link {
     color: var(--white)
   }
+}
+
+
+/* Nucleus */
+.nucleus {
+  margin-top: 3rem;
+}
+
+.nucleus__heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.nucleus__grid {
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+
+@media (min-width: 768px) {
+  .nucleus__grid {
+    /* background: rgb(171, 127, 127); */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5rem;
+    align-items: center;
+  }
+}
+
+.list {
+}
+
+.list__element {
+  box-shadow: 0px 0px 15px 3px rgb(0 0 0/.15);
+  padding: 2rem;
+  margin-bottom: 5rem;
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.list__element:hover {
+  transform: scale(1.1);
+}
+
+.list__heading {
+  font-size: 3rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.list__text {
+  margin: 0;
+  font-size: 2rem
 }
